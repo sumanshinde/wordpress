@@ -1,0 +1,25 @@
+# TechGrow Solutions - Theme Documentation
+
+## 📂 Core Structure
+- **style.css**: Theme metadata and premium global styles.
+- **functions.php**: Backend logic, database handling, and admin menus.
+- **header.php / footer.php**: Dynamic site structure with Customizer support.
+- **front-page.php**: The main high-end landing page.
+- **js/contact.js**: AJAX logic for secure form submissions.
+
+## ⚙️ Backend Features
+1. **Portfolio CPT**: Add projects via the "Portfolio" menu in the dashboard.
+2. **Client Submissions**: View form entries in the "Submissions" admin page.
+3. **Customizer**: Update company info (Email, Socials, Logo) via **Appearance > Customize**.
+
+## 🚀 Installation & Demo
+1. **Real Backend**: Zip the `techgrow-solutions` folder and upload to a WordPress installation.
+2. **Static Demo**: Open `preview.html` in your browser. Note: Form submission in `preview.html` is simulated for demo purposes.
+
+## 🛠️ Requirements
+- WordPress 5.8+
+- PHP 7.4+
+- (Optional) Elementor for importing the included JSON template.
+
+---
+*Created for TechGrow Solutions by Trae AI.*

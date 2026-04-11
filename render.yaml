@@ -1,0 +1,43 @@
+# Blueprint for deploying TechGrow Solutions on Render
+services:
+  # 1. Database (MariaDB)
+  - type: web
+    name: techgrow-db
+    env: docker
+    dockerContext: .
+    dockerCommand: "docker-entrypoint.sh mysqld"
+    envVars:
+      - key: MYSQL_ROOT_PASSWORD
+        value: root
+      - key: MYSQL_DATABASE
+        value: wordpress
+      - key: MYSQL_USER
+        value: wordpress
+      - key: MYSQL_PASSWORD
+        value: wordpress
+    disk:
+      name: db-data
+      mountPath: /var/lib/mysql
+      sizeGB: 1
+
+  # 2. WordPress Web Service
+  - type: web
+    name: techgrow-wordpress
+    env: docker
+    plan: starter # Starter plan recommended for WordPress
+    envVars:
+      - key: WORDPRESS_DB_HOST
+        fromService:
+          name: techgrow-db
+          type: web
+          property: host
+      - key: WORDPRESS_DB_USER
+        value: wordpress
+      - key: WORDPRESS_DB_PASSWORD
+        value: wordpress
+      - key: WORDPRESS_DB_NAME
+        value: wordpress
+    disk:
+      name: wp-data
+      mountPath: /var/www/html
+      sizeGB: 1

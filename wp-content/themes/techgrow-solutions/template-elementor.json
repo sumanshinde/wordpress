@@ -1,0 +1,87 @@
+{
+  "version": "0.4",
+  "title": "TechGrow Solutions - Premium Dark Layout",
+  "type": "page",
+  "content": [
+    {
+      "id": "hero-section",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#050505",
+        "padding": {
+          "unit": "px",
+          "top": "220",
+          "bottom": "140"
+        }
+      },
+      "elements": [
+        {
+          "id": "hero-column",
+          "elType": "column",
+          "elements": [
+            {
+              "id": "hero-heading",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Elevate Your Vision with Elite Digital Craftsmanship",
+                "align": "center",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 80
+                },
+                "title_color": "#ffffff"
+              }
+            },
+            {
+              "id": "hero-cta",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "Initiate Project",
+                "align": "center",
+                "background_color": "#007bff",
+                "border_radius": {
+                  "unit": "px",
+                  "size": 100
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "services-section",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#050505",
+        "padding": {
+          "unit": "px",
+          "top": "120",
+          "bottom": "120"
+        }
+      },
+      "elements": [
+        {
+          "id": "services-column",
+          "elType": "column",
+          "elements": [
+            {
+              "id": "services-title",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Premium Services",
+                "align": "center",
+                "title_color": "#ffffff"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

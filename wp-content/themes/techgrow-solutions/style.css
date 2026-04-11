@@ -1,0 +1,189 @@
+/*
+Theme Name: TechGrow Solutions
+Theme URI: https://techgrowsolutions.com
+Author: Trae AI
+Author URI: https://trae.ai
+Description: A premium, modern, and futuristic dark theme for an IT services company.
+Version: 1.1.0
+Text Domain: techgrow-solutions
+*/
+
+/* --- Reset and Base Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Color Palette - Premium Dark Theme */
+    --bg-dark: #050505; /* Black base */
+    --bg-navy: #0a1128; /* Navy Blue */
+    --primary-glow: #007bff; /* Bright blue glow */
+    --secondary-glow: #28a745; /* Soft green glow */
+    --text-main: #ffffff;
+    --text-muted: #a0a0a0;
+    --text-light: #666666;
+    
+    /* Gradients */
+    --dark-gradient: linear-gradient(135deg, #050505 0%, #0a1128 100%);
+    --primary-gradient: linear-gradient(135deg, #007bff 0%, #00d2ff 100%);
+    --glow-shadow: 0 0 20px rgba(0, 123, 255, 0.3);
+    
+    /* Layout */
+    --container-width: 1240px;
+    --section-padding: 140px;
+    --border-radius-sm: 8px;
+    --border-radius-md: 16px;
+    --border-radius-lg: 24px;
+    --border-radius-full: 100px;
+    
+    /* Transitions */
+    --transition-base: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', 'Poppins', sans-serif;
+    line-height: 1.7;
+    color: var(--text-main);
+    background-color: var(--bg-dark);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+/* --- Typography --- */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 800;
+    color: var(--text-main);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.03em;
+}
+
+h1 { font-size: clamp(3rem, 6vw, 5rem); }
+h2 { font-size: clamp(2.5rem, 5vw, 3.5rem); }
+h3 { font-size: 2rem; }
+
+p {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.gradient-text {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+/* --- Layout Components --- */
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.section {
+    padding: var(--section-padding) 0;
+    position: relative;
+}
+
+.section-bg-navy {
+    background: var(--bg-navy);
+}
+
+.section-title {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 80px;
+}
+
+/* --- Futuristic Cards --- */
+.card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 50px 40px;
+    border-radius: var(--border-radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    transition: var(--transition-base);
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    background: rgba(255, 255, 255, 0.06);
+    border-color: var(--primary-glow);
+    box-shadow: var(--glow-shadow);
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 40px;
+    background: var(--primary-gradient);
+    color: #fff;
+    border-radius: var(--border-radius-full);
+    font-weight: 700;
+    text-decoration: none;
+    transition: var(--transition-base);
+    box-shadow: var(--glow-shadow);
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 123, 255, 0.5);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: none;
+}
+
+.btn-secondary:hover {
+    border-color: var(--primary-glow);
+    background: rgba(0, 123, 255, 0.05);
+}
+
+/* --- Grid System --- */
+.grid { display: grid; gap: 40px; }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+    .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+    :root { --section-padding: 100px; }
+}
+
+/* --- Custom Utilities --- */
+.glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glow-accent {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.15;
+    z-index: -1;
+}
+
+.glow-blue { background: var(--primary-glow); }
+.glow-green { background: var(--secondary-glow); }
